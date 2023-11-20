@@ -209,12 +209,15 @@ static void preProcessGeometryData(mat3d bsRot, mat3d bsRotInverted, mat3d lh1Ro
 // Sensor positions on the deck
 #define SENSOR_POS_W (0.015f / 2.0f)
 #define SENSOR_POS_L (0.030f / 2.0f)
+// ORIGINAL SENSOR LAYOUT
 // static vec3d sensorDeckPositions[4] = {
 //     {-SENSOR_POS_L, SENSOR_POS_W, 0.0},
 //     {-SENSOR_POS_L, -SENSOR_POS_W, 0.0},
 //     {SENSOR_POS_L, SENSOR_POS_W, 0.0},
 //     {SENSOR_POS_L, -SENSOR_POS_W, 0.0},
 // };
+
+// FLIPPED 180 DEG ABOUT  X AXIS SENSOR LAYOUT
 static vec3d sensorDeckPositions[4] = {
     {-SENSOR_POS_L, -SENSOR_POS_W, 0.0},
     {-SENSOR_POS_L, SENSOR_POS_W, 0.0},

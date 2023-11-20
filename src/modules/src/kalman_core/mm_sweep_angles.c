@@ -27,6 +27,23 @@
 
 
 void kalmanCoreUpdateWithSweepAngles(kalmanCoreData_t *this, sweepAngleMeasurement_t *sweepInfo, const uint32_t nowMs, OutlierFilterLhState_t* sweepOutlierFilterState) {
+  /**
+   * Will's notes:
+   * @param s float32 The sensor position, in the global reference frame, as a float32 vector (I THINK) 
+   * @param Rcf_ The CF rotation matrix, which is the quad's atttude.  
+   * @param scf_ The sensor position in the CF reference frame, 
+   * @param pcf vec3d Current position of CF in the global reference frame, with the relative sensor position added on   
+   * @param h float32 The H vector, which is the Jacobian of the measurement model, in the rotor reference frame
+   * @param pr vec3d* position of the rotor in global reference frame (equal to sweepInfo->rotorPos)
+   * @param stmp ? 
+   * @param sr_ 
+   * 
+   * 
+   * @param x s in the rotor reference frame
+   * @param y s in the rotor reference frame
+   * @param z s in the rotor reference frame
+   * @param tan_t tangent of the sweep 
+  */
   // Rotate the sensor position from CF reference frame to global reference frame,
   // using the CF roatation matrix
   vec3d s;
