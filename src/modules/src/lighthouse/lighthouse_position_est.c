@@ -440,7 +440,8 @@ static bool estimateYawDeltaOneBaseStation(const int bs, const pulseProcessorRes
   // Calculate yaw delta for the two diagonals and average
   float yawDelta1, yawDelta2;
   if (lighthouseGeometryYawDelta(ipv1, spv1, n, &yawDelta1) && lighthouseGeometryYawDelta(ipv2, spv2, n, &yawDelta2)) {
-    *yawDelta = (yawDelta1 + yawDelta2) / 2.0f;
+    // TODO_will: Test if this flips the sign of the delta, and makes the cf rotate the correct way.
+    *yawDelta = -(yawDelta1 + yawDelta2) / 2.0f;
     return true;
    } else {
     *yawDelta = 0.0f;
