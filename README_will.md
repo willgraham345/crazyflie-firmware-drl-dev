@@ -5,7 +5,7 @@ source venv/bin/activate
 ```
 
 More notes on building repo [here](https://www.bitcraze.io/documentation/repository/crazyflie-firmware/master/building-and-flashing/build/)
-Building Repo
+Building original Repo
 ```shell
 make cf2_defconfig
 make -j 12

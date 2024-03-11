@@ -229,12 +229,12 @@ static vec3d sensorDeckPositions[4] = {
 
 static positionMeasurement_t ext_pos;
 // Original standard deviation
-// static float sweepStd = 0.0004;
-// static float sweepStdLh2 = 0.001;
+static float sweepStd = 0.0004;
+static float sweepStdLh2 = 0.001;
 
 // 10x the standard deviation to make the estimator more robust
-static float sweepStd = 0.004;
-static float sweepStdLh2 = 0.01;
+// static float sweepStd = 0.004;
+// static float sweepStdLh2 = 0.01;
 
 static vec3d position;
 static vec3d positionLog;
